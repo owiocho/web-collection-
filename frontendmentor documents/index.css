@@ -1,0 +1,258 @@
+:root {
+  --crc-box-color: rgb(48, 48, 253);
+  --crc-box-blue: #3333ff;
+  --circle-blue: #3333cc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* general layout for both circle box and summary box */
+
+.main-box {
+  box-shadow: 10px 20px 10px 2px rgb(234, 235, 241), -10px 0px 10px 2px rgb(234, 235, 241);
+  width: 100vmin;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  gap: 5px;
+}
+
+.circle-box, .summary-box{
+  
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow: hidden;
+
+}
+
+/* designing the circle and its container */
+
+.circle-box {
+  align-items: center;
+  gap: 1em;
+  color: #ffffff;
+  justify-content: center;
+  background: var(--crc-box-blue);
+}
+
+.circle-box p {
+  text-align: center;
+}
+
+.circle-box .circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 65px;
+  margin: 1em 0;
+  background: linear-gradient(var(--circle-blue), var(--crc-box-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px;
+}
+
+/* summary box design... */
+
+.summary-box .body {
+  display: flex;justify-content: space-between;
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 12px;
+}
+.summary-box .first, .second {
+ display: flex;
+ gap: 3px;
+
+}
+
+.summary-box #btn {
+  margin: 12px 0;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.summary-box legend {
+  padding: 12px 0;
+}
+
+
+.second, .first p {
+  font-size: large;
+}
+.second p {
+  font-weight: bold;
+  color: #3d4457;
+}
+.second #ioo {
+  font-weight: unset;
+  color: unset;
+  color: #8c959a;
+}
+
+#reaction {
+  background: #fff6f5;
+}
+#reaction .first {
+  color: #ee6b70;
+}
+#memory {
+  background: #fffbf2;
+}
+#memory .first {
+  color: #f9bb37;
+}
+#verbal {
+  background: #f2fbfa;
+}
+#verbal .first {
+  color: #28b992;
+}
+#visual {
+  background: #f3f3fd;
+}
+#visual .first {
+  color: #5e66ff;
+}
+
+
+#btn {
+  background: #303b59;
+  color: #fbffff;
+  font-size: large;
+}
+
+/* footer design.. */
+
+.attribution {
+  margin: 18px 0;
+}
+
+/* mobile... */
+
+@media  screen and (max-width: 375px) {
+ 
+.main-box {
+  width: 80vmin;
+  border-radius: unset;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: unset;
+}
+
+.circle-box, .summary-box{
+  
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  overflow: hidden;
+
+}
+
+/* designing the circle and its container */
+
+
+
+.circle-box {
+  align-items: center;
+  gap: 0.5em;
+  color: #ffffff;
+  justify-content: flex-start;
+  background: var(--crc-box-blue);
+  height: 45%;
+}
+
+.circle-box p {
+  text-align: center;
+}
+
+.circle-box .circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 55px;
+  margin: 1em 0;
+  background: linear-gradient(var(--circle-blue), var(--crc-box-color));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px;
+}
+
+.circle-box h3 {
+  font-size: medium;
+}
+.circle-box #tp {
+  font-size: 1em;
+}
+.circle-box .comment {
+   font-size: 0.2em;
+}
+
+/* summary box design... */
+
+.summary-box .body {
+  display: flex;justify-content: space-between;
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 18px;
+}
+.summary-box .first, .second {
+ display: flex;
+ gap: 1px;
+
+}
+.summary-box {
+  padding: 20px;
+}
+
+.summary-box #btn {
+  margin: 2px 0 5px 0;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: small;
+}
+
+.summary-box legend {
+  padding: 1px 0;
+  font-size: medium;
+  margin-top: -10px;
+}
+
+
+.second, .first p {
+  font-size: 0.8em;
+}
+.second p {
+  font-weight: bold;
+  color: #3d4457;
+}
+.second #ioo {
+  font-weight: unset;
+  color: unset;
+  color: #8c959a;
+}
+}
